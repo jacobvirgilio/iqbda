@@ -8,12 +8,15 @@ body {
   width:960px;
   background-color: white;
   margin: 0 auto; /* TB LR */
+  height: 100%;
+  min-height: 100vh;
 }
 #page-header, #content, #navbar {
   padding: 0 1em;
 }
 #page-header {
   padding-top: 1em;
+  position: relative;
 }
 #page-header img {
   vertical-align: middle;
@@ -26,6 +29,18 @@ body {
 }
 #page-header h2 {
   font: bolder italic 1.5em "Georgia", "Times",serif;
+}
+#user-links {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+#user-links a {
+  color: darkgreen;
+  text-decoration: none;
+}
+#user-links a:hover {
+  text-decoration: underline;
 }
 #navbar {
   background-color: #333;
@@ -45,4 +60,23 @@ body {
 }
 #navbar ul li {
   display: inline-block;
+}
+th, td {
+  padding: 6px;
+}
+tr:nth-child(odd) {
+  background-color: #eee;
+}
+label {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+input[type=radio] + label, input[type=checkbox] + label {
+    font-weight: normal;
+    display:inline;
+  }
+input[type=submit] {
+    display:block;
+    margin: 15px 0;
 }
